@@ -9,11 +9,11 @@
         <EntityTypeShape EntityType="Fabrics.Occupation" Width="1.5" PointX="0.75" PointY="4" IsExpanded="true" />
         <EntityTypeShape EntityType="Fabrics.Order" Width="1.5" PointX="5.25" PointY="3.625" IsExpanded="true" />
         <EntityTypeShape EntityType="Fabrics.OrderLine" Width="1.5" PointX="7.5" PointY="3.625" IsExpanded="true" />
-        <EntityTypeShape EntityType="Fabrics.Product" Width="1.5" PointX="5.25" PointY="0.75" IsExpanded="true" />
         <AssociationConnector Association="Fabrics.FK_Client_Occupation" ManuallyRouted="false" />
         <AssociationConnector Association="Fabrics.fk_Order_ClientId" ManuallyRouted="false" />
         <AssociationConnector Association="Fabrics.fk_OrderLine_OrderId" ManuallyRouted="false" />
-        <AssociationConnector Association="Fabrics.fk_OrderLine_ProductId" ManuallyRouted="false" />
+        <EntityTypeShape EntityType="Fabrics.Product" Width="1.5" PointX="5.5" PointY="0.75" />
+        <AssociationConnector Association="Fabrics.fk_OrderLine_ProductId" />
       </Diagram>
     </edmx:Diagrams>
   </edmx:Designer>
