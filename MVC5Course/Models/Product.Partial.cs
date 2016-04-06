@@ -22,21 +22,22 @@ namespace MVC5Course.Models
             if (this.ProductId == default(int))
             {
                 //Create
-                if (this.Stock < 5)
-                {
+                //if (this.Stock < 5)
+                //{
                     
-                    yield return new ValidationResult("庫存量過低，無法新增商品", new string[] { "Stock" });
-                }
+                //    yield return new ValidationResult("庫存量過低，無法新增商品", new string[] { "Stock" });
+                //}
             }
             else
             {
                 //Update
             }
-            
-            if (this.Price < 100)
-            {
-                yield return new ValidationResult("價格設定錯誤", new string[] { "Price" });
-            }
+
+            //if (this.Price < 100)
+            //{
+            //    yield return new ValidationResult("價格設定錯誤", new string[] { "Price" });
+            //}
+            yield break;
         }
     }
    
@@ -48,7 +49,7 @@ namespace MVC5Course.Models
         [Required]
         public int ProductId { get; set; }
         [Required]
-        [產品名稱必須至少包含兩個空白字元(ErrorMessage = "產品名稱必須至少包含兩個空白字元")]
+        //[產品名稱必須至少包含兩個空白字元(ErrorMessage = "產品名稱必須至少包含兩個空白字元")]
         [StringLength(80, ErrorMessage="欄位長度不得大於 80 個字元")]
         public string ProductName { get; set; }
         public Nullable<decimal> Price { get; set; }

@@ -1,0 +1,23 @@
+﻿
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Index</h2>
+
+<a href="@Url.Action("FileTest")?dl=1">
+    <img alt="這是圖片" src="@Url.Action("FileTest")" />
+</a>
+<button id="btnJsonTest">執行 JsonTest 並輸出到 Console 視窗</button>
+
+@section scripts{
+    <script>
+        $("#btnJsonTest").on('click', function () {
+            $.get('@Url.Action("JsonTest")'+'/' + $("#test").val(), "", function (data) {
+                console.log(data);
+
+            });
+
+        });
+    </script>
+    }
