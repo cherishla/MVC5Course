@@ -10,10 +10,11 @@ using MVC5Course.Models;
 
 namespace MVC5Course.Controllers
 {
+    [計算Action的執行時間]
+
     public class ProductsController : BaseController
     {
         //private FabricsEntities db = new FabricsEntities();
-
         // GET: Products
         public ActionResult Index()
         {
@@ -116,16 +117,18 @@ namespace MVC5Course.Controllers
         // 詳細資訊，請參閱 http://go.microsoft.com/fwlink/?LinkId=317598。
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Edit([Bind(Include = "ProductId,ProductName,Price,Active,Stock")] Product product)
+        public ActionResult Edit(int id, FormCollection form) //會衝突，所以多加一個form參數，但用不到
         {
-            if (ModelState.IsValid)
+            var product = repoProduct.Find(id);
+
+            if (TryUpdateModel(product, new string[] {
+                "productId", "ProductName", "Price", "Active", "Stock"}))
             {
-                var dbProduct = (FabricsEntities)repoProduct.UnitOfWork.Context;
-                dbProduct.Entry(product).State = EntityState.Modified;
+                //var dbProduct = (FabricsEntities)repoProduct.UnitOfWork.Context;
+                //dbProduct.Entry(product).State = EntityState.Modified;
                 repoProduct.UnitOfWork.Commit();
                 TempData["ProductsEditMsg"] = product.ProductName + "更新成功";
-                //db.Entry(product).State = EntityState.Modified;
-                //db.SaveChanges();
+
                 return RedirectToAction("Index");
             }
             return View(product);

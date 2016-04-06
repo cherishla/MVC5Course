@@ -180,11 +180,13 @@
     <Compile Include="Controllers\AccountController.cs" />
     <Compile Include="Controllers\ARController.cs" />
     <Compile Include="Controllers\BaseController.cs" />
+    <Compile Include="Controllers\VTController.cs" />
+    <Compile Include="Models\EditProfileViewModel.cs" />
     <Compile Include="Controllers\HomeController.cs" />
-    <Compile Include="Controllers\ManageController.cs" />
     <Compile Include="Controllers\ProductsController.cs" />
     <Compile Include="Controllers\Test1Controller.cs" />
     <Compile Include="Controllers\TestController.cs" />
+    <Compile Include="Controllers\計算Action的執行時間Attribute.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
@@ -387,6 +389,9 @@
     <Content Include="Views\Test1\ProductView.cshtml" />
     <Content Include="Views\Test1\ProductSP.cshtml" />
     <Content Include="Views\AR\Index.cshtml" />
+    <Content Include="Views\Shared\Error2.cshtml" />
+    <Content Include="Views\VT\Index.cshtml" />
+    <Content Include="Views\VT\RazorTest.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Views\Base\" />

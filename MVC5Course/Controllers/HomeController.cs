@@ -13,10 +13,15 @@ namespace MVC5Course.Controllers
             return View();
         }
 
-        public ActionResult About()
+        [HandleError(ExceptionType =typeof(InvalidOperationException), View ="Error2")]
+        public ActionResult About(string name)
         {
             ViewBag.Message = "Your application description page.";
-
+            if (string.IsNullOrEmpty(name))
+            {
+                throw new ArgumentException("Argument is Error");
+            }
+            throw new InvalidOperationException("Just error!");
             return View();
         }
 
