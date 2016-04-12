@@ -1,9 +1,21 @@
 ﻿@model double?
+@using MVC5Course.Models;
 
-
-    @for (int i = 0; i < 10; i++)
+    @*@for (int i = 0; i < 10; i++)
     {
         <label>
-            @Html.RadioButton("", i, Model.HasValue && i == Model.Value) @i
+            @Html.RadioButton("creditRatingGroup", i, Model.HasValue && i == Model.Value) @i
         </label>
-    }
+    }*@
+
+@{ 
+    var db = new FabricsEntities();
+    var ratingList = (from p in db.Client
+                      select p.CreditRating).Distinct().OrderBy(p => p).ToList();
+
+
+    var selectList = new SelectList(ratingList,  Model);
+    @Html.DropDownList("", selectList, "請選擇", new { @Class = "form-control" })
+
+
+}
