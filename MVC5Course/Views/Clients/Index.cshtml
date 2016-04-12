@@ -11,6 +11,8 @@
     @Html.ActionLink("Create New", "Create")
     @Html.DropDownList("Gender", null, "---請選擇性別---", new { onchange = "this.form.submit();" })
     @Html.DropDownList("CreditRating", null, "---請選擇---", new { onchange = "this.form.submit();" })
+    @Ajax.ActionLink("取得時間", "GetDateTime", new AjaxOptions { UpdateTargetId = "now"})
+    <div id="now"></div>
 </p>
 <table class="table">
     <tr>

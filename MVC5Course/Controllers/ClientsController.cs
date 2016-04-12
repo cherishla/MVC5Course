@@ -145,5 +145,10 @@ namespace MVC5Course.Controllers
             }
             base.Dispose(disposing);
         }
+
+        public DateTime GetDateTime()
+        {
+            return DateTime.Now;
+        }
     }
 }
