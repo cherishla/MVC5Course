@@ -15,10 +15,10 @@ namespace MVC5Course.Controllers
         /// 處理未知需求
         /// </summary>
         /// <param name="actionName"></param>
-        protected override void HandleUnknownAction(string actionName)
-        {
-            this.RedirectToAction("Index", "Home")
-                .ExecuteResult(this.ControllerContext);
-        }
+        //protected override void HandleUnknownAction(string actionName)
+        //{
+        //    this.RedirectToAction("Index", "Home")
+        //        .ExecuteResult(this.ControllerContext);
+        //}
     }
 }
