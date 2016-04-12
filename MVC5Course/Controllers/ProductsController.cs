@@ -52,6 +52,7 @@ namespace MVC5Course.Controllers
             }
 
             Product product = repoProduct.Find(id.Value);
+            
             //Product product = db.Product.Find(id);
 
             if (product == null)
@@ -62,7 +63,10 @@ namespace MVC5Course.Controllers
 
 
         }
-
+        public ActionResult OrderLines(int id)
+        {
+            return PartialView(repoProduct.Find(id).OrderLine);
+        }
         // GET: Products/Create
         public ActionResult Create()
         {

@@ -48,3 +48,10 @@
     @Html.ActionLink("Edit", "Edit", new { id = Model.ProductId }) |
     @Html.ActionLink("Back to List", "Index")
 </p>
+
+<hr />
+<h2>
+    商品明細
+</h2>
+@*@Html.Partial("OrderLines", Model.OrderLine)*@
+@Html.Action("OrderLines",new { id = Model.ProductId})
