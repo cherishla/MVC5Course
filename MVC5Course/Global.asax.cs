@@ -23,6 +23,10 @@ namespace MVC5Course
                 但在MVC中，並不會用webForm，所以要進行下列設定 */
             ViewEngines.Engines.Clear();
             ViewEngines.Engines.Add(new RazorViewEngine());
+
+            /* 在Chorme 、FireFox裡面，API預設是用XML，在Get中會發生錯誤，
+               所以設定這一行，就可以清掉設定，讓API可以在網頁瀏覽 */
+            GlobalConfiguration.Configuration.Formatters.XmlFormatter.SupportedMediaTypes.Clear();
         }
     }
 }
