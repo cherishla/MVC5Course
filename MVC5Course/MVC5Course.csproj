@@ -231,6 +231,7 @@
     <Compile Include="Controllers\BaseController.cs" />
     <Compile Include="Controllers\ClientsController.cs" />
     <Compile Include="Controllers\API\ProductsApiController.cs" />
+    <Compile Include="Controllers\OrdersController.cs" />
     <Compile Include="Controllers\VTController.cs" />
     <Compile Include="Models\EditProfileViewModel.cs" />
     <Compile Include="Controllers\HomeController.cs" />
@@ -344,6 +345,7 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="App_Data\Landscape.jpg" />
+    <Content Include="App_Data\MVC5Course.XML" />
     <Content Include="App_Readme\Elmah.txt" />
     <Content Include="Areas\HelpPage\HelpPage.css" />
     <Content Include="calendar.html" />
@@ -568,6 +570,8 @@
     <Content Include="Areas\HelpPage\Views\Help\DisplayTemplates\ApiGroup.cshtml" />
     <Content Include="Areas\HelpPage\Views\Help\Api.cshtml" />
     <Content Include="App_Data\MVC Lab.docx" />
+    <Content Include="CodeTemplates\MvcControllerWithContext\Controller.cs.t4" />
+    <Content Include="CodeTemplates\MvcView\List.cs.t4" />
     <None Include="Scripts\jquery-1.10.2.intellisense.js" />
     <Content Include="Scripts\jquery-1.10.2.js" />
     <Content Include="Scripts\jquery-1.10.2.min.js" />
@@ -654,8 +658,25 @@
     <Content Include="Views\Shared\EditorTemplates\DateTime.cshtml" />
     <Content Include="Views\Shared\DisplayTemplates\CreditRating.cshtml" />
     <Content Include="Views\Shared\EditorTemplates\CreditRating.cshtml" />
+    <Content Include="Views\Orders\Create.cshtml" />
+    <Content Include="Views\Orders\Delete.cshtml" />
+    <Content Include="Views\Orders\Details.cshtml" />
+    <Content Include="Views\Orders\Edit.cshtml" />
+    <Content Include="Views\Orders\Index.cshtml" />
   </ItemGroup>
   <ItemGroup>
+    <Folder Include="CodeTemplates\ApiControllerEmpty\" />
+    <Folder Include="CodeTemplates\ApiControllerWithActions\" />
+    <Folder Include="CodeTemplates\ApiControllerWithContext\" />
+    <Folder Include="CodeTemplates\ApiDependencyCodeGenerator\" />
+    <Folder Include="CodeTemplates\MvcArea\" />
+    <Folder Include="CodeTemplates\MvcControllerEmpty\" />
+    <Folder Include="CodeTemplates\MvcControllerWithActions\" />
+    <Folder Include="CodeTemplates\MvcFullDependencyCodeGenerator\" />
+    <Folder Include="CodeTemplates\MvcMinimalDependencyCodeGenerator\" />
+    <Folder Include="CodeTemplates\MvcViewWithoutModel\" />
+    <Folder Include="CodeTemplates\ODataControllerWithActions\" />
+    <Folder Include="CodeTemplates\ODataControllerWithContext\" />
     <Folder Include="Views\Base\" />
   </ItemGroup>
   <ItemGroup>
